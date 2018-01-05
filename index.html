@@ -1,13 +1,13 @@
 <!doctype html>
 <meta charset="utf-8" />
-<title>pwa-creff - ideal weight calculator</title>
+<title>creff ideal weight calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="pwa-creff calculates a persons ideal weight based on the CREFF formula" />
+<meta name="description" content="calculates a persons ideal weight based on the CREFF formula" />
 <style>
 body {
 	font-family: sans-serif;
 }
-.wrapper {
+.creff-form__wrapper {
 	padding: .5rem 0;
 }
 label {
@@ -24,27 +24,27 @@ input[type="button"] {
 	text-transform: uppercase;
 	font-weight: 700;
 }
-.ideal {
+.ideal-weight {
 	color: #d00;
 }
 </style>
 <main>
 	<header>
-		<h1>pwa-creff</h1>
+		<h1>creff ideal weight calculator</h1>
 	</header>
 	<section>
-		<h2>your ideal weight is: <span class="ideal">?</span> <abbr title="kilograms">kg</abbr></h2>
-		<form action="#" id="creff">
-			<div class="wrapper">
+		<h2>your ideal weight is: <span class="ideal-weight">?</span> <abbr title="kilograms">kg</abbr></h2>
+		<form action="#" id="creff-form" class="creff-form">
+			<div class="creff-form__wrapper">
  				<label for="height">height:</label>
  				<input type="text" id="height" name="height" placeholder="your height ..." />
  				<abbr title="centimeters">cm</abbr>
 			</div>
-			<div class="wrapper">
+			<div class="creff-form__wrapper">
  				<label for="age">age:</label>
  				<input type="text" id="age" name="age" placeholder="your age ..." />
 			</div>
-			<div class="wrapper">
+			<div class="creff-form__wrapper">
 				<label for="slimness">slimness:</label>
 				<select id="slimness" name="slimness">
 	  			<option value="0.9">gracile</option>
@@ -52,8 +52,8 @@ input[type="button"] {
 	  			<option value="1.1">stocky</option>
 				</select>
 			</div>
-			<div class="wrapper">
-				<input type="button" value="clear" onclick="resetForm();" />
+			<div class="creff-form__wrapper">
+				<input type="button" value="clear" onclick="resetCreffForm();" />
 				<input type="button" value="calculate" onclick="calculateIdealWeight();" />
 			</div>
 		</form>
@@ -72,4 +72,4 @@ input[type="button"] {
 		limitations under the License.</p>
 	</footer>
 </main>
-<script src="js/pwa-creff.js"></script>
+<script src="js/creff-calculator.js"></script>
