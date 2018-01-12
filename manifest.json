@@ -3,8 +3,8 @@
     "short_name": "Creff",
     "start_url": "index.html",
     "display": "standalone",
-    "background_color" : "#d00",
-    "theme_color": "#2196F3",
+    "background_color" : "#fff",
+    "theme_color": "#00f",
     "Beschreibung": "calculates a persons ideal weight based on the CREFF formula",
     "orientation": "portrait",
     "icons": [
