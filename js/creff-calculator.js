@@ -30,3 +30,13 @@ creffForm.addEventListener("submit", function(event) {
 		event.preventDefault();
 	}
 }, false);
+
+(() => {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+			.register('/service-worker.js')
+			.then(function() { 
+				console.log('Service Worker Registered'); 
+		  	});
+	  }
+})();
